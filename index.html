@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> 
+    <title>Macro Tracker</title>
+</head>
+<body>
+    <h1>Macronutrient Tracker</h1>
+    <p>Total protein: <b id="totalProtein">0</b> grams</p>
+    <p>Total carbs: <b id="totalCarbs">0</b> grams</p>
+    <p>Total fat: <b id="totalFat">0</b> grams</p>
+    <form id="proteinForm">
+        <input type="text" id="protein" placeholder="Enter your protein (g)">
+        <button type="button" onclick="addProtein()">Add</button>
+    </form>
+    <form id="carbsForm">
+        <input type="text" id="carbs" placeholder="Enter your carbs (g)">
+        <button type="button" onclick="addCarbs()">Add</button>
+    </form>
+    <form id="fatForm">
+        <input type="text" id="fat" placeholder="Enter your fat (g)">
+        <button type="button" onclick="addFat()">Add</button>
+    </form>
+    <script src="script.js"></script>
+    <h2>Goal Macros</h2>
+    <p>Goal Protein: <b id="goalProtein">0</b> g</p>
+    <p>Goal Carbs: <b id="goalCarbs">0</b> g</p>
+    <p>Goal Fat: <b id="goalFat">0</b> g</p>
+    <div>
+        <input type="number" id="bodyWeight" placeholder="Weight in kg">
+    </div>
+    <div>
+        <select id="goal">
+            <option value="maintain">Maintain Weight</option>
+            <option value="gain">Gain Weight</option>
+            <option value="lose">Lose Weight</option>
+        </select>
+    </div>
+    <button onclick="calculateMacros()">Calculate Macros</button>
+</body>
+</html>
